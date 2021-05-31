@@ -1,0 +1,25 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+	font-family: 'Exo 2', sans-serif;
+}
+
+#formulario
+{
+    align-items: center;
+    width: 227px;
+}
+
+
+footer
+{
+    text-align: center;
+    background-color: #42b72a;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
