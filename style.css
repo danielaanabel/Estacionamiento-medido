@@ -9,17 +9,56 @@
 
 #formulario
 {
+    display: flex;
     align-items: center;
-    width: 227px;
+    width: 240px;
 }
 
+
+#logo
+{
+    height: 100px;
+}
+#botonsubmit
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#btn-registro
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control
+{
+  border: 2px solid #CED4D0;
+}
+
+
+
+
+main
+{
+    display: flex;
+    padding-top: 100px;
+    justify-content:center;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+}
 
 footer
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #42b72a;
+    background-color: #26DAD3;
     position:absolute;
     bottom: 0;
     width: 100%;
