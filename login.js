@@ -1,25 +1,27 @@
-$(document).ready(function() {
-    
-    var correo = localStorage.getItem('usuario');
-    
-    if ( correo !=  null ) {
-        //Notar los accesos al DOM, tomamos los elementos del DOM y les damos un comportamiento
-        alert("login exitoso")
-     
+$(document).ready(function(){
 
-        $("#saludo").append("Bienvenido "+ correo);
-    }else{
-        $("#salir").hide();
-      
+
+   
+    var leido = localStorage.getItem("nombre");
+    
+    if ( leido !=null && leido !="") {
+        alert("login exitoso")
+        $("#salir").show();
     }
+    else{
+        $("#salir").hide();
+    }
+
+    $("#botonsubmit").click(function(){
+        var usuario = $("#usuario").val();
+        localStorage.setItem("nombre", usuario);
+    });
+
     $("#salir").click( function() {
-        localStorage.removeItem('usuario');
+        localStorage.removeItem("nombre");
         localStorage.clear();
         location.reload();
     });
-}); 
 
-function saludar() {
-    var nombre = $("#usuario").val();
-    localStorage.setItem('usuario', nombre);
-}
+   
+});
