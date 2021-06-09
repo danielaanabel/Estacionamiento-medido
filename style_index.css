@@ -32,13 +32,15 @@
     flex-direction: column;
 }
 
+#menu
+{
+    padding: 0;
+    background-color: #85c9fb;
+}
 .form-control
 {
   border: 2px solid #CED4D0;
 }
-
-
-
 
 main
 {
@@ -58,7 +60,7 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #26DAD3;
+    background-color: #85c9fb;
     position:absolute;
     bottom: 0;
     width: 100%;

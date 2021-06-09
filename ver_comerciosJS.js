@@ -24,7 +24,6 @@ function ejecutarMapa() {
     var comercio7=L.marker([-34.496992, -58.718191]);
     comercio7.addTo(map);
 
-
      var cluster = L.markerClusterGroup();
     cluster.addLayers([
         comercio1,
@@ -37,7 +36,7 @@ function ejecutarMapa() {
      ])
 
     cluster.addTo(map);
-    map.addLayer(cluster);
+    //map.addLayer(cluster);
 
 }
   
