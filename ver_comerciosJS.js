@@ -9,8 +9,10 @@ function ejecutarMapa() {
     }).addTo(map);
   
 
+   
+
     var comercio1=L.marker([-34.488436, -58.725576]);
-    comercio1.addTo(map);
+    comercio1.addTo(map).bindPopup("<b>Kiosco Luz!</b><br>abierto de 9 a 19hrs.");
     var comercio2=L.marker([-34.497772, -58.728851]);
     comercio2.addTo(map);
     var comercio3=L.marker([-34.492622, -58.730610]);
