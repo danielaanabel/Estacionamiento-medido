@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estacionamiento medido UNGS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="style_mostrar_deposito.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- css leaflet -->
+    <link rel="stylesheet" href="./leaflet/leaflet.css">
+    <link rel="stylesheet" href="./leaflet/MarkerCluster.css">
+    <link rel="stylesheet" href="./leaflet/MarkerCluster.Default.css">
+    <!-- script leaflet -->
+    <script src="./leaflet/leaflet.js"></script>
+    <script src="./leaflet/leaflet.markercluster-src.js"></script>
+
+    <!-- javascript propios-->
+    <script src="mapCreation.js"></script>
+
+    <!-- fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@383&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header >
+         <img src="data:image/png;base64,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" alt="logo" id="logo">
+
+         <nav id="menu" class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #85c9fb;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style=" background-color: #85c9fb;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="infracciones.html">Consultar infracciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ver_lugares.html">Ver lugares para estacionar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ver_comercios.html">Buscar punto de venta</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>		
+    </header>
+    <main>  
+        <div id="container">
+            
+        </div>
+        
+    </main>
+
+    <footer>
+		<div id="copyright">copyright - 2021 Estacionamiento medido UNGS | desarrollado por grupo5 </div>
+	</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

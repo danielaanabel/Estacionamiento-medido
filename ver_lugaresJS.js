@@ -1,11 +1,6 @@
 function ejecutarMapa() {
 
-    var ubicacionInicial = [-34.491136, -58.724671];
-    var map = L.map('mapa').setView(ubicacionInicial, 15);
-  
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    var map = createMap('mapa');
   
     L.polygon([
       L.latLng(-34.489710, -58.737936),
