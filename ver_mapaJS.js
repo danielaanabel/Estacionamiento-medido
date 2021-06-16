@@ -55,7 +55,6 @@ function ejecutarMapa() {
             }
         });
 
-
     var blueIcon = new LeafIcon({iconUrl: 'leaflet/images/punto_azul.png'});
     var greenIcon = new LeafIcon({iconUrl:'leaflet/images/punto_verde.png'});
     
