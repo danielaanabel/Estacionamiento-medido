@@ -24,7 +24,7 @@ var bootstrap = function() {
             var li = $('<div id="infraccion">')
             .append('<b>Infracción nro: </b>').append(infraccion.id).append('<br>')
             .append(infraccion.fechaHoraRegistro).append('<br>')
-            .append(infraccion.direccionRegistrada).append('<br>')
+            .append('<b>Dirección: </b>').append(infraccion.direccionRegistrada).append('<br>')
             .append('<b>infracción tipo: </b>').append(data.tipo.descripcion).append('<br>')
             .append('<b>monto a abonar: </b>').append(infraccion.montoAPagar).append('<br>')
             $("#container").append(li);
