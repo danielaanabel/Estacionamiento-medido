@@ -10,7 +10,12 @@
 {
     height: 100px;
 }
-
+#mapid
+{
+    margin: 50px;
+    padding: 20px;
+    width: 250px;
+}
 #infraccion
 {
     margin: 50px;
@@ -18,7 +23,7 @@
     text-align: center;
     border: 1px solid;
     border-radius: 20px;
-    background-color: #85c9fb
+    background-color: #85c9fb; 
 }
 #container
 {

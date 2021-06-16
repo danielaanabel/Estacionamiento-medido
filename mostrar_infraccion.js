@@ -44,6 +44,20 @@ var bootstrap = function() {
             .append(vehiculo.deposito.telefono).append('<br>')
             .append(vehiculo.deposito.horarios).append('<br>')
             $("#infraccion").append(deposito);
+            
+
+            let mapaid = $('<div id="mapid">');
+            $("#container").append(mapaid);
+            
+
+            var ubicacionInicial = vehiculo.deposito.ubicacion;
+            var map = L.map('mapid').setView(ubicacionInicial, 15);
+            console.log(ubicacionInicial);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            L.marker(ubicacionInicial).bindPopup("Su vehículo se encuentra aquí").addTo(map);
             })
         }
 
