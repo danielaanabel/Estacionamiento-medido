@@ -22,11 +22,11 @@ var bootstrap = function() {
         .then(data => {
 
             var li = $('<div id="infraccion">')
-            .append('Infracción nro: ').append(infraccion.id).append('<br>')
+            .append('<b>Infracción nro: </b>').append(infraccion.id).append('<br>')
             .append(infraccion.fechaHoraRegistro).append('<br>')
             .append(infraccion.direccionRegistrada).append('<br>')
-            .append(data.tipo.descripcion).append('<br>')
-            .append(infraccion.montoAPagar).append('<br>')
+            .append('<b>infracción tipo: </b>').append(data.tipo.descripcion).append('<br>')
+            .append('<b>monto a abonar: </b>').append(infraccion.montoAPagar).append('<br>')
             $("#container").append(li);
            
         })
@@ -38,7 +38,7 @@ var bootstrap = function() {
                 console.log(vehiculo.deposito.nombre);
                 
             let deposito = $('<p>')
-            .append('Su vehículo ha sido remolcado al deposito: ').append('<br>')
+            .append('<b>Su vehículo ha sido remolcado al deposito: </b>').append('<br>')
             .append(vehiculo.deposito.nombre).append('<br>')
             .append(vehiculo.deposito.direccion).append('<br>')
             .append(vehiculo.deposito.telefono).append('<br>')

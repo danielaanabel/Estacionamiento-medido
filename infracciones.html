@@ -47,7 +47,7 @@
         <div id="form-infracciones">
             <label for="patente">Ingrese la patente del vehículo a consultar</label><br>
             <div class="input-group mb-3">
-                <input type="text" id="patente" class="form-control" placeholder="Ingrese la patente en mayúscula" aria-label="Recipient's username" minlength="6" maxlength="7" pattern="[A-Z0-9]" title="ingrese solo letras mayúsculas y números" required>
+                <input type="text" id="patente" class="form-control" placeholder="Ingrese la patente en mayúscula" aria-label="Recipient's username" minlength="6" maxlength="7" pattern="([A-Z0-9])\w+" title="ingrese solo letras mayúsculas y números" required>
                 <button id="boton" class="btn btn-outline-primary">Consultar</button>
             </div> <br>
             <div id="no-tiene"></div>
@@ -59,7 +59,7 @@
 		<div id="copyright">copyright - 2021 Estacionamiento medido UNGS | desarrollado por grupo5 </div>
 	</footer>   
     <!-- javascript propios-->
-    <script src="api.js"></script>
+    <script src="verificar_patente.js"></script>
   
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
