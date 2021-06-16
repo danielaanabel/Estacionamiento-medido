@@ -11,19 +11,27 @@
     height: 100px;
 }
 
+#infraccion
+{
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: #85c9fb
+}
+#container
+{
+    display: flex;
+    justify-content:center;
+    height: 100%;
+}
 #menu
 {
     padding: 0;
     background-color: #85c9fb;
 }
 
-main
-{
-    display: flex;
-    padding-top: 100px;
-    justify-content:center;
-    height: 100%;
-}
 
 header
 {

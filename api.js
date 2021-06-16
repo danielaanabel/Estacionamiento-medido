@@ -1,39 +1,21 @@
 
-var bootstrap = function() {
+var verificarPatente = function() {
 
-    //Para el ejemplo
-    var heroku = 'https://infraccionesweb.herokuapp.com/api/';
-    var urlInfracciones = '/infracciones/';
-    var urlTiposInfraccion = 'tiposInfraccion/';
-    var patente_id = 'ABC123';
-    var urlAcarreo = '/acarreos/';
+    var patente_id;
+ 
 
-
-
-    fetch(heroku + patente_id + urlInfracciones)  //pedimos la ubicacion al servidor
-    .then(data => data.json()) //parseamos la respuesta a un JSON
-    .then(data => {data['infracciones'].forEach(function(infraccion) {
-        fetch(heroku + urlTiposInfraccion + infraccion.tipoInfraccion)
-        .then( data => data.json())
-        .then(data => {
-            // console.log(infraccion.tipoInfraccion)
-            infraccion.tipoInfraccion = data.tipo.descripcion
-            // console.log(infraccion.tipoInfraccion)
-        })
-        if(infraccion.existeAcarreo == true){
-            fetch(heroku + patente_id + urlAcarreo + infraccion.id)
-            .then(data => data.json())
-            .then(data => {
-                infraccion.deposito = data.acarreo.deposito
-                console.log(infraccion.deposito)
-                console.log(infraccion.deposito.ubicacion.lat)
-            })
+    $("#boton").click(function(){
+        patente_id = $('#patente').val();
+        localStorage.setItem("patente",patente_id);
+        if(patente_id == 'ABC123' || patente_id == 'AAA000' || patente_id == 'BBB111'){
+            window.open("mostrar_deposito.html","_parent","width=120,height=300,scrollbars=NO");
         }
-    })
+        else{
+            document.getElementById("no-tiene").innerHTML = `<p>No existen infracciones para la patente ${patente_id}</p>`;
+        }
 
-
-
-});
-
+ });
+   
 }
-$(bootstrap)
+
+$(verificarPatente);
