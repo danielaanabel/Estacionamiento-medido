@@ -10,7 +10,7 @@ var bootstrap = function() {
     var heroku = 'https://infraccionesweb.herokuapp.com/api/';
     var urlInfracciones = '/infracciones/';
     var urlTiposInfraccion = 'tiposInfraccion/';
-    var patente_id ="ABC123"; //localStorage.getItem("patente");
+    var patente_id = localStorage.getItem("patente");
     var urlAcarreo = '/acarreos/';
    
 
