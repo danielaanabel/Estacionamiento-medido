@@ -10,6 +10,5 @@ $(document).ready(function(){
         var usuario = $("#usuario").val();
         localStorage.setItem("nombre", usuario);
     });
-
    
 });

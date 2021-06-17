@@ -1,12 +1,6 @@
 var vehiculo = new Object();
 var bootstrap = function() {   
 
-    // $("#salir").click( function() { //fsdfasdfnsdajfhsdh
-    //     localStorage.removeItem("patente");
-    //     localStorage.clear();
-    //     location.reload();
-    // });
-
     var heroku = 'https://infraccionesweb.herokuapp.com/api/';
     var urlInfracciones = '/infracciones/';
     var urlTiposInfraccion = 'tiposInfraccion/';
@@ -61,7 +55,7 @@ var bootstrap = function() {
             })
         }
 
-    });//aca termina foreach
+    });
 
     });  
 }

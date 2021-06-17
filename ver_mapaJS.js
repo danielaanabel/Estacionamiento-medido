@@ -97,11 +97,7 @@ function ejecutarMapa() {
 
    
     L.control.layers(overlayMaps).addTo(map);
-    
-    //cluster.addTo(map);
 
-   
-    //map.addLayer(cluster);
 
 }
   
