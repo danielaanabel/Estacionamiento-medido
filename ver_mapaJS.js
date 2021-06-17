@@ -86,7 +86,7 @@ function ejecutarMapa() {
      ])
 
 
-    var zonas = L.layerGroup([polygonVerde, polygonAzul, zonas_estacionamiento]);
+    var zonas = L.layerGroup([ zonas_estacionamiento,polygonVerde, polygonAzul]);
 
     var comercios = L.layerGroup([cluster]);
 
