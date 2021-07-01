@@ -12,3 +12,11 @@ Sobre las infracciones, se debe muestra como un conductor puede solicitar un lis
 con todas sus infracciones vigentes, y mostrar la información del lugar del depósito para una
 infracción que incluya el acarreo.
 
+.Consulta de infracciones
+image::infracciones.jpg[]
+
+.Login
+image::login.jpg[]
+
+.Mapa de zonas de estacionamiento
+image::zonas.jpg[]
